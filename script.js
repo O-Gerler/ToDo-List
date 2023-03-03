@@ -22,12 +22,14 @@ addBtn.addEventListener('click', e => {
         let text = todosName.value
 
         const newItem = document.createElement('li')
+        const itemText = document.createElement('p')
 
-        newItem.innerText = text
+        itemText.innerText = text
 
         const delBtn = createDelBtn()
 
         newItem.appendChild(delBtn)
+        newItem.appendChild(itemText)
         list.appendChild(newItem)
 
         todosName.value = ""
