@@ -85,3 +85,13 @@ li{
     justify-content: space-between;
     align-items: center;
 }
+
+@media (width < 1000px) {
+    section{
+        width: 90vw;
+    }
+
+    .search, .todos{
+        width: 80vw;
+    }
+}
