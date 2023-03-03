@@ -7,6 +7,10 @@ const createDelBtn = () => {
     delBtn.addEventListener('click', e => {
         const newItem = delBtn.parentElement
         list.removeChild(newItem)
+
+        if (list.children.length === 0) {
+            noMoreTask.style.display = 'block'
+        }
     })
 
     return delBtn
@@ -15,6 +19,7 @@ const createDelBtn = () => {
 const todosName = document.querySelector('input')
 const addBtn = document.getElementById('add-btn')
 const list = document.querySelector('ul')
+const noMoreTask = document.querySelector('.sin-tareas')
 
 addBtn.addEventListener('click', e => {
 
@@ -33,6 +38,10 @@ addBtn.addEventListener('click', e => {
         list.appendChild(newItem)
 
         todosName.value = ""
+
+        console.log(list.children.length)
+
+        noMoreTask.style.display = 'none'
     }
 })
 
