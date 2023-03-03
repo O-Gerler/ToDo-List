@@ -33,3 +33,10 @@ addBtn.addEventListener('click', e => {
         todosName.value = ""
     }
 })
+
+todosName.addEventListener('keypress', e => {
+    if (e.key === 'Enter') {
+        e.preventDefault()
+        addBtn.click()
+    }
+})
