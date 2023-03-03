@@ -48,6 +48,10 @@ input{
     font-size: 20px;
 }
 
+input:focus{
+    outline: none;
+}
+
 button{
     height: 25px;
     width: 25px;
